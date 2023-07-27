@@ -7,7 +7,7 @@ import feign.Logger;
 import feign.okhttp.OkHttpClient;
 
 @Configuration
-public class ClientConfiguration {
+public class HyperBankClientConfiguration {
 
 	@Bean
 	public OkHttpClient client() {
@@ -16,7 +16,12 @@ public class ClientConfiguration {
 
 	@Bean
 	Logger.Level feignLoggerLevel() {
-		return Logger.Level.BASIC;
+		return Logger.Level.FULL;
 	}
+	
+//	@Bean
+//	public ErrorDecoder errorDecoder() {
+//	    return new HyperBankErrorDecoder();
+//	}
 
 }
