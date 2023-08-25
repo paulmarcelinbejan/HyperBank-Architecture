@@ -32,11 +32,13 @@
 		<paulmarcelinbejan-toolbox.version>1.0.0</paulmarcelinbejan-toolbox.version>
 		<!-- HyperBank Architecture -->
 		<hyperbank-architecture-base.version>1.0.0</hyperbank-architecture-base.version>
+		<hyperbank-architecture-base-data.version>1.0.0</hyperbank-architecture-base-data.version>
 		<hyperbank-architecture-database-sql.version>1.0.0</hyperbank-architecture-database-sql.version>
 		<hyperbank-architecture-web.version>1.0.0</hyperbank-architecture-web.version>
 	</properties>
 	<modules>
 		<module>hyperbank-architecture-base</module>
+		<module>hyperbank-architecture-base-data</module>
 		<module>hyperbank-architecture-database-sql</module>
 		<module>hyperbank-architecture-web</module>
 	</modules>
@@ -60,6 +62,11 @@
 				<groupId>com.hyperbank.architecture</groupId>
 				<artifactId>hyperbank-architecture-base</artifactId>
 				<version>${hyperbank-architecture-base.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.hyperbank.architecture</groupId>
+				<artifactId>hyperbank-architecture-base-data</artifactId>
+				<version>${hyperbank-architecture-base-data.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>com.hyperbank.architecture</groupId>
