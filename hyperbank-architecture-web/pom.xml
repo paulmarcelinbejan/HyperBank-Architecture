@@ -20,7 +20,7 @@
 		</dependency>
 		<dependency>
         	<groupId>com.paulmarcelinbejan.toolbox</groupId>
-       		<artifactId>toolbox-jackson</artifactId>
+       		<artifactId>toolbox-utils-jackson</artifactId>
         </dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>

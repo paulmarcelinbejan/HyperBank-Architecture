@@ -25,9 +25,5 @@
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>com.paulmarcelinbejan.toolbox</groupId>
-			<artifactId>toolbox-annotations</artifactId>
-		</dependency>
 	</dependencies>
 </project>
