@@ -16,6 +16,10 @@
 		</dependency>
 		<dependency>
 			<groupId>com.paulmarcelinbejan.toolbox</groupId>
+			<artifactId>toolbox-service-helper</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.paulmarcelinbejan.toolbox</groupId>
 			<artifactId>toolbox-utils-validation</artifactId>
 		</dependency>
 		<dependency>
