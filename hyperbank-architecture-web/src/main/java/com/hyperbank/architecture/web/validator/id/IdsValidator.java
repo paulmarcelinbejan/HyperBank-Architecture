@@ -2,7 +2,7 @@ package com.hyperbank.architecture.web.validator.id;
 
 import java.util.Collection;
 
-import com.paulmarcelinbejan.architecture.sniper.validator.Validator;
+import com.paulmarcelinbejan.architecture.coordinator.validator.Validator;
 
 import jakarta.validation.ValidationException;
 

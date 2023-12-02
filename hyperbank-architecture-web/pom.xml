@@ -16,7 +16,7 @@
 		</dependency>
 		<dependency>
 			<groupId>com.paulmarcelinbejan.architecture</groupId>
-			<artifactId>sniper-architecture</artifactId>
+			<artifactId>coordinator-architecture</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>com.paulmarcelinbejan.toolbox</groupId>

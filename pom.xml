@@ -30,7 +30,7 @@
 	    <lombok-mapstruct-binding.version>0.2.0</lombok-mapstruct-binding.version>
 	    <!-- TOOLBOX -->
 		<paulmarcelinbejan-toolbox.version>1.0.0</paulmarcelinbejan-toolbox.version>
-		<sniper-architecture.version>1.0.0</sniper-architecture.version>
+		<coordinator-architecture.version>1.0.0</coordinator-architecture.version>
 		<!-- HyperBank Architecture -->
 		<hyperbank-architecture-base.version>1.0.0</hyperbank-architecture-base.version>
 		<hyperbank-architecture-base-data.version>1.0.0</hyperbank-architecture-base-data.version>
@@ -81,8 +81,8 @@
 			</dependency>
 			<dependency>
 				<groupId>com.paulmarcelinbejan.architecture</groupId>
-				<artifactId>sniper-architecture</artifactId>
-				<version>${sniper-architecture.version}</version>
+				<artifactId>coordinator-architecture</artifactId>
+				<version>${coordinator-architecture.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
