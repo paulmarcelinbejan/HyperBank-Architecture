@@ -3,9 +3,9 @@ package com.hyperbank.architecture.web.validation.temporal.validator;
 import static java.time.ZoneOffset.UTC;
 
 import com.hyperbank.architecture.web.validation.temporal.annotation.NonOverlappingInstant;
-import com.paulmarcelinbejan.toolbox.utils.time.aware.HistoricalInstantAware;
-import com.paulmarcelinbejan.toolbox.utils.time.zoneddatetime.ZonedDateTimeUtils;
 
+import io.github.paulmarcelinbejan.toolbox.utils.time.aware.HistoricalInstantAware;
+import io.github.paulmarcelinbejan.toolbox.utils.time.zoneddatetime.ZonedDateTimeUtils;
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
 

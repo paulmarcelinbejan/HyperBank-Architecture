@@ -7,7 +7,8 @@ import java.time.format.DateTimeFormatter;
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.JsonSerializer;
 import com.fasterxml.jackson.databind.SerializerProvider;
-import com.paulmarcelinbejan.toolbox.utils.time.pattern.date.DatePattern;
+
+import io.github.paulmarcelinbejan.toolbox.utils.time.pattern.date.DatePattern;
 
 public class LocalDateSerializer extends JsonSerializer<LocalDate> {
 

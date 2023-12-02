@@ -46,7 +46,7 @@
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
-				<groupId>com.paulmarcelinbejan.toolbox</groupId>
+				<groupId>io.github.paulmarcelinbejan.toolbox</groupId>
 				<artifactId>toolbox</artifactId>
 				<version>${paulmarcelinbejan-toolbox.version}</version>
 				<scope>import</scope>
@@ -80,7 +80,7 @@
 				<version>${hyperbank-architecture-web.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>com.paulmarcelinbejan.architecture</groupId>
+				<groupId>io.github.paulmarcelinbejan.architecture</groupId>
 				<artifactId>coordinator-architecture</artifactId>
 				<version>${coordinator-architecture.version}</version>
 			</dependency>

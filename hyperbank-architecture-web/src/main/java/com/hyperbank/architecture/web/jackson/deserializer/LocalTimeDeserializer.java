@@ -7,7 +7,8 @@ import java.time.format.DateTimeFormatter;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.JsonDeserializer;
-import com.paulmarcelinbejan.toolbox.utils.time.pattern.time.TimePattern;
+
+import io.github.paulmarcelinbejan.toolbox.utils.time.pattern.time.TimePattern;
 
 public class LocalTimeDeserializer extends JsonDeserializer<LocalTime> {
 

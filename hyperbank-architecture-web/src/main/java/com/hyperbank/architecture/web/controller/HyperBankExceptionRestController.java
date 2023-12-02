@@ -6,10 +6,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
-import com.paulmarcelinbejan.toolbox.web.controller.exception.ExceptionRestController;
-import com.paulmarcelinbejan.toolbox.web.response.ExceptionResponse;
-
 import feign.FeignException;
+import io.github.paulmarcelinbejan.toolbox.web.controller.exception.ExceptionRestController;
+import io.github.paulmarcelinbejan.toolbox.web.response.ExceptionResponse;
 
 @RestControllerAdvice
 public class HyperBankExceptionRestController extends ExceptionRestController {

@@ -1,9 +1,9 @@
 package com.hyperbank.architecture.web.validation.temporal.validator;
 
 import com.hyperbank.architecture.web.validation.temporal.annotation.NonOverlappingLocalTime;
-import com.paulmarcelinbejan.toolbox.utils.time.aware.HistoricalLocalTimeAware;
-import com.paulmarcelinbejan.toolbox.utils.time.localtime.LocalTimeUtils;
 
+import io.github.paulmarcelinbejan.toolbox.utils.time.aware.HistoricalLocalTimeAware;
+import io.github.paulmarcelinbejan.toolbox.utils.time.localtime.LocalTimeUtils;
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
 
