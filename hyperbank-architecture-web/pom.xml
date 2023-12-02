@@ -15,6 +15,10 @@
 			<artifactId>toolbox-web</artifactId>
 		</dependency>
 		<dependency>
+			<groupId>com.paulmarcelinbejan.architecture</groupId>
+			<artifactId>sniper-architecture</artifactId>
+		</dependency>
+		<dependency>
 			<groupId>com.paulmarcelinbejan.toolbox</groupId>
 			<artifactId>toolbox-service-helper</artifactId>
 		</dependency>
