@@ -1,6 +1,6 @@
 package com.hyperbank.architecture.web.validator.id;
 
-import com.paulmarcelinbejan.architecture.coordinator.validator.Validator;
+import io.github.paulmarcelinbejan.coordinator.architecture.validator.Validator;
 
 public interface IdValidator<
 		ID extends Number & Comparable<? super ID>> 

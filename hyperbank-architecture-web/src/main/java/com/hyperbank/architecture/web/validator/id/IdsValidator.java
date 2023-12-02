@@ -2,8 +2,7 @@ package com.hyperbank.architecture.web.validator.id;
 
 import java.util.Collection;
 
-import com.paulmarcelinbejan.architecture.coordinator.validator.Validator;
-
+import io.github.paulmarcelinbejan.coordinator.architecture.validator.Validator;
 import jakarta.validation.ValidationException;
 
 public interface IdsValidator<
