@@ -14,7 +14,7 @@ import io.github.paulmarcelinbejan.coordinator.architecture.coordinator.base.Coo
 public class UpdateMany${ENTITY}CoordinatorImpl extends CoordinatorFull<List<${ENTITY}UpdateRequest>, List<${ENTITY}>, List<${ENTITY}>, List<${ENTITY}Response>> implements UpdateMany${ENTITY}Coordinator {
 
 	public UpdateMany${ENTITY}CoordinatorImpl(
-			UpdateManyRequest${ENTITY}Validator validator,
+			${ENTITY}UpdateRequestsValidator validator,
 			UpdateMany${ENTITY}Mapper mapperInput, 
 			UpdateMany${ENTITY}Service service,
 			EntitiesToDtos${ENTITY}Mapper mapperOutput) {

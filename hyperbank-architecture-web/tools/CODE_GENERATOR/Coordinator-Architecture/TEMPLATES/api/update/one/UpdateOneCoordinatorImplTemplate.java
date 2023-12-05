@@ -12,7 +12,7 @@ import io.github.paulmarcelinbejan.coordinator.architecture.coordinator.base.Coo
 public class UpdateOne${ENTITY}CoordinatorImpl extends CoordinatorFull<${ENTITY}UpdateRequest, ${ENTITY}, ${ENTITY}, ${ENTITY}Response> implements UpdateOne${ENTITY}Coordinator {
 
 	public UpdateOne${ENTITY}CoordinatorImpl(
-			UpdateOneRequest${ENTITY}Validator validator,
+			${ENTITY}UpdateRequestValidator validator,
 			UpdateOne${ENTITY}Mapper mapperInput, 
 			UpdateOne${ENTITY}Service service,
 			EntityToDto${ENTITY}Mapper mapperOutput) {

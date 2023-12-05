@@ -14,7 +14,7 @@ import io.github.paulmarcelinbejan.coordinator.architecture.coordinator.base.Coo
 public class SaveMany${ENTITY}CoordinatorImpl extends CoordinatorFull<List<${ENTITY}SaveRequest>, List<${ENTITY}>, List<${ENTITY}>, List<${ENTITY}Response>> implements SaveMany${ENTITY}Coordinator {
 
 	public SaveMany${ENTITY}CoordinatorImpl(
-			SaveManyRequest${ENTITY}Validator validator,
+			${ENTITY}SaveRequestsValidator validator,
 			SaveMany${ENTITY}Mapper mapperInput, 
 			SaveMany${ENTITY}Service service,
 			EntitiesToDtos${ENTITY}Mapper mapperOutput) {

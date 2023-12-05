@@ -4,6 +4,6 @@ import ${PACKAGE}.${ENTITY_LOWERCASE}.dto.${ENTITY}SaveRequest;
 
 import io.github.paulmarcelinbejan.coordinator.architecture.validator.jakarta.JakartaBaseValidator;
 
-public interface SaveOneRequest${ENTITY}Validator extends JakartaBaseValidator<${ENTITY}SaveRequest> {
+public interface ${ENTITY}SaveRequestValidator extends JakartaBaseValidator<${ENTITY}SaveRequest> {
 	
 }

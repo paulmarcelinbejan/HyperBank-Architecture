@@ -12,7 +12,7 @@ import io.github.paulmarcelinbejan.coordinator.architecture.coordinator.base.Coo
 public class SaveOne${ENTITY}CoordinatorImpl extends CoordinatorFull<${ENTITY}SaveRequest, ${ENTITY}, ${ENTITY}, ${ENTITY}Response> implements SaveOne${ENTITY}Coordinator {
 
 	public SaveOne${ENTITY}CoordinatorImpl(
-			SaveOneRequest${ENTITY}Validator validator,
+			${ENTITY}SaveRequestValidator validator,
 			SaveOne${ENTITY}Mapper mapperInput, 
 			SaveOne${ENTITY}Service service,
 			EntityToDto${ENTITY}Mapper mapperOutput) {
