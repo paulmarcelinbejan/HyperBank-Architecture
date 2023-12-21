@@ -5,7 +5,15 @@ import java.util.List;
 import ${PACKAGE}.${ENTITY_LOWERCASE}.entity.${ENTITY};
 
 import io.github.paulmarcelinbejan.coordinator.architecture.service.ServiceOutputAware;
+import io.github.paulmarcelinbejan.toolbox.exception.functional.FunctionalException;
+import io.github.paulmarcelinbejan.toolbox.exception.technical.TechnicalException;
 
 public interface FindAll${ENTITY}Service extends ServiceOutputAware<List<${ENTITY}>> {
 
+	/**
+	 * Find all ${ENTITY_LOWERCASE}
+	 */
+	@Override
+	List<${ENTITY}> execute() throws FunctionalException, TechnicalException;
+	
 }
