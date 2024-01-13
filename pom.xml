@@ -30,7 +30,7 @@
 	    <lombok-mapstruct-binding.version>0.2.0</lombok-mapstruct-binding.version>
 	    <!-- TOOLBOX -->
 		<paulmarcelinbejan-toolbox.version>1.0.1-SNAPSHOT</paulmarcelinbejan-toolbox.version>
-		<coordinator-architecture.version>1.0.0</coordinator-architecture.version>
+		<coordinator-architecture.version>1.0.1-SNAPSHOT</coordinator-architecture.version>
 		<!-- HyperBank Architecture -->
 		<hyperbank-architecture-base.version>1.0.0</hyperbank-architecture-base.version>
 		<hyperbank-architecture-base-data.version>1.0.0</hyperbank-architecture-base-data.version>
@@ -81,7 +81,12 @@
 			</dependency>
 			<dependency>
 				<groupId>io.github.paulmarcelinbejan.architecture</groupId>
-				<artifactId>coordinator-architecture</artifactId>
+				<artifactId>coordinator-architecture-core</artifactId>
+				<version>${coordinator-architecture.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.github.paulmarcelinbejan.architecture</groupId>
+				<artifactId>coordinator-architecture-impl</artifactId>
 				<version>${coordinator-architecture.version}</version>
 			</dependency>
 		</dependencies>
