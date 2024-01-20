@@ -1,17 +1,37 @@
 #!/bin/zsh
 
+# Regular Colors
+GREEN='\033[0;92m'
+BLUE='\033[1;94m'
+RED='\033[0;31m'
+COLOR_OFF='\033[0m'
+
 readInputVariables() {
+    if [ $# -eq 5 ]; then
+        readInputVariablesFromArguments
+    else
+        readInputVariablesFromInput
+    fi
+
+    echo
+}
+
+readInputVariablesFromArguments() {
     # Read input variables
-    echo "Enter TEMPLATES DIRECTORY: "
-    read TEMPLATES_DIRECTORY
-    echo "Enter ENTITY: "
-    read ENTITY
-    echo "Enter PACKAGE: "
-    read PACKAGE
-    echo "Enter ID_TYPE: "
-    read ID_TYPE
-    echo "Enter PROJECT DIRECTORY: "
-    read OUTPUT_DIRECTORY
+    TEMPLATES_DIRECTORY="$1"
+    ENTITY="$2"
+    PACKAGE="$3"
+    ID_TYPE="$4"
+    OUTPUT_DIRECTORY="$5"
+}
+
+readInputVariablesFromInput() {
+    # Read input variables
+    read -rp "Enter TEMPLATES DIRECTORY: " TEMPLATES_DIRECTORY
+    read -rp "Enter ENTITY: " ENTITY
+    read -rp "Enter PACKAGE: " PACKAGE
+    read -rp "Enter ID_TYPE: " ID_TYPE
+    read -rp "Enter PROJECT DIRECTORY: " OUTPUT_DIRECTORY
 }
 
 createEntityVariants() {
@@ -77,16 +97,16 @@ generate_impl() {
 
             if [[ ($parent_folder_name != "dto" && $parent_folder_name != "entity") || (! -e "$target_item") ]]; then
                 replacePlaceholders "$source_item" "$target_item"
-                echo "${target_item} created correctly"
+                echo -e "$GREEN ${target_item} created correctly $COLOR_OFF"
             fi
 
         fi
 
         # Check if the sed command was executed correctly
         if [ $? -eq 0 ]; then
-          echo "${target_item} created correctly"
+          echo -e "$GREEN ${target_item} created correctly $COLOR_OFF"
         else
-          echo "Error creating ${target_item} from ${source_item}"
+          echo -e "$RED Error creating ${target_item} from ${source_item} $COLOR_OFF"
         fi
         
         echo
@@ -95,23 +115,13 @@ generate_impl() {
 }
 
 logCodeGeneratorCompleted() {
-    echo -e "\033[1;32mScript completed!\033[0m"
-    echo -e "\033[1;31mPlease consider to check the Mapper before using it.\033[0m"
+    echo -e "$GREEN Script completed! $COLOR_OFF"
+    echo -e "$RED Please consider to check the Mapper before using it. $COLOR_OFF"
 }
 
-#INPUT
-if [ $# -eq 5 ]; then
-    # If 5 arguments are provided
-    TEMPLATES_DIRECTORY="$1"
-    ENTITY="$2"
-    PACKAGE="$3"
-    ID_TYPE="$4"
-    OUTPUT_DIRECTORY="$5"
-else
-    readInputVariables
-fi
+#-------------------------------------------------------(MAIN SCRIPT LOGIC)-------------------------------------------------------
 
-echo
+readInputVariables
 
 createEntityVariants
 
