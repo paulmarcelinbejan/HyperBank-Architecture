@@ -1,17 +1,36 @@
 #!/bin/zsh
 
+# Regular Colors
+GREEN='\033[0;92m'
+BLUE='\033[1;94m'
+RED='\033[0;31m'
+COLOR_OFF='\033[0m'
+
 readInputVariables() {
+    if [ $# -eq 5 ]; then
+        readInputVariablesFromArguments
+    else
+        readInputVariablesFromInput
+    fi
+
+    echo
+}
+
+readInputVariablesFromArguments() {
     # Read input variables
-    echo "Enter PROJECT DIRECTORY: "
-    read PROJECT_DIRECTORY
-    echo "Enter ENTITY: "
-    read ENTITY
-    echo "Enter PACKAGE: "
-    read PACKAGE
-    echo "Enter ID_TYPE: "
-    read ID_TYPE
-    echo "Enter OUTPUT DIRECTORY: "
-    read OUTPUT_DIRECTORY
+    PROJECT_DIRECTORY="$1"
+    ENTITY="$2"
+    PACKAGE="$3"
+    ID_TYPE="$4"
+    OUTPUT_DIRECTORY="$5"
+}
+
+readInputVariablesFromInput() {
+    read -rp "Enter PROJECT DIRECTORY: " PROJECT_DIRECTORY
+    read -rp "Enter ENTITY: " ENTITY
+    read -rp "Enter PACKAGE: " PACKAGE
+    read -rp "Enter ID_TYPE: " ID_TYPE
+    read -rp "Enter OUTPUT DIRECTORY: " OUTPUT_DIRECTORY
 }
 
 createEntityVariants() {
@@ -37,11 +56,6 @@ replacePlaceholders() {
         -e "s/\<${ENTITY_LOWERCASE}\>/\${ENTITY_LOWERCASE}/g" \
         -e "s/\<${ENTITY_LOWERCAMELCASE}\>/\${ENTITY_LOWERCAMELCASE}/g" \
         ${from} > ${to}
-}
-
-logCodeGeneratorCompleted() {
-    echo -e "\033[1;32mScript completed!\033[0m"
-    echo -e "\033[1;32mTEMPLATES generated correctly into: $OUTPUT_DIRECTORY !\033[0m"
 }
 
 # Function to process files and directories recursively in order to create templates
@@ -93,9 +107,9 @@ generate_template() {
 
         # Check if the sed command was executed correctly
         if [ $? -eq 0 ]; then
-          echo "${target_item} created correctly"
+          echo -e "$GREEN ${target_item} created correctly $COLOR_OFF"
         else
-          echo "Error creating ${target_item} from ${source_item}"
+          echo -e "$RED Error creating ${target_item} from ${source_item} $COLOR_OFF"
         fi
         
         echo
@@ -103,19 +117,14 @@ generate_template() {
     done
 }
 
-#INPUT
-if [ $# -eq 5 ]; then
-    # If 5 arguments are provided
-    PROJECT_DIRECTORY="$1"
-    ENTITY="$2"
-    PACKAGE="$3"
-    ID_TYPE="$4"
-    OUTPUT_DIRECTORY="$5"
-else
-    readInputVariables
-fi
+logCodeGeneratorCompleted() {
+    echo -e "$GREEN Script completed! $COLOR_OFF"
+    echo -e "$GREEN TEMPLATES generated correctly into: $OUTPUT_DIRECTORY ! $COLOR_OFF"
+}
 
-echo
+#-------------------------------------------------------(MAIN SCRIPT LOGIC)-------------------------------------------------------
+
+readInputVariables
 
 createEntityVariants
 
