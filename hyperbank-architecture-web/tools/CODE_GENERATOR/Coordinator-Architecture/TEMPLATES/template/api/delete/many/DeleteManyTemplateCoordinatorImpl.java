@@ -2,10 +2,9 @@ package ${PACKAGE}.${ENTITY_LOWERCASE}.api.delete.many;
 
 import java.util.List;
 
-import com.hyperbank.architecture.web.validator.id.base.${ID_TYPE}IdsValidator;
-
 import io.github.paulmarcelinbejan.coordinator.architecture.coordinator.Coordinator;
 import io.github.paulmarcelinbejan.coordinator.architecture.coordinator.base.CoordinatorWithoutMappings;
+import io.github.paulmarcelinbejan.coordinator.architecture.validator.id.base.${ID_TYPE}IdsValidator;
 
 @Coordinator
 public class DeleteMany${ENTITY}CoordinatorImpl extends CoordinatorWithoutMappings<List<${ID_TYPE}>> implements DeleteMany${ENTITY}Coordinator {
