@@ -91,16 +91,16 @@ generate_impl() {
 
             if [[ ($parent_folder_name != "dto" && $parent_folder_name != "entity") || (! -e "$target_item") ]]; then
                 replacePlaceholders "$source_item" "$target_item"
-                echo -e "$GREEN $(basename "$target_item") created correctly! $COLOR_OFF"
+                echo -e "${GREEN}$(basename "$target_item") created correctly! $COLOR_OFF"
             fi
 
         fi
 
         # Check if the sed command was executed correctly
         if [ $? -eq 0 ]; then
-            echo -e "$GREEN $(basename "$target_item") created correctly! $COLOR_OFF"
+            echo -e "${GREEN}$(basename "$target_item") created correctly! $COLOR_OFF"
         else
-            echo -e "$RED Error creating $(basename "$target_item") from ${source_item} !!! $COLOR_OFF"
+            echo -e "${RED}Error creating $(basename "$target_item") from ${source_item} !!! $COLOR_OFF"
         fi
 
         echo
