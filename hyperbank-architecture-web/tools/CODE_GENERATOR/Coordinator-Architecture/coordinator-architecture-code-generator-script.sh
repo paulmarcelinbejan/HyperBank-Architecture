@@ -118,7 +118,7 @@ logCodeGeneratorCompleted() {
 
 #-------------------------------------------------------(MAIN SCRIPT LOGIC)-------------------------------------------------------
 
-readInputVariables
+readInputVariablesFromInput
 
 createEntityVariants
 
