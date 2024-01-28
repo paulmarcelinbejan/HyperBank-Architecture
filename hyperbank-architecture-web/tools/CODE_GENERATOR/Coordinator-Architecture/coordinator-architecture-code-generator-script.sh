@@ -62,7 +62,6 @@ generate_impl() {
     for source_item in "$source_dir"/*; do
 
         local source_base_name=$(basename "$source_item")
-        local target_base_name
 
         if [[ $source_base_name == *Template* ]]; then
             # Replace "Template" with the value of ENTITY in source_base_name
@@ -92,7 +91,7 @@ generate_impl() {
 
             if [[ ($parent_folder_name != "dto" && $parent_folder_name != "entity") || (! -e "$target_item") ]]; then
                 replacePlaceholders "$source_item" "$target_item"
-                echo -e "$GREEN ${target_item} created correctly $COLOR_OFF"
+                echo -e "$GREEN $(basename "$target_item") created correctly! $COLOR_OFF"
             fi
 
         fi
