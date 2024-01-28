@@ -4,11 +4,11 @@
 //import java.io.InputStream;
 //
 //import com.fasterxml.jackson.databind.ObjectMapper;
-//import com.paulmarcelinbejan.toolbox.exception.remoteservice.RemoteServiceException;
-//import com.paulmarcelinbejan.toolbox.web.response.ExceptionResponse;
 //
 //import feign.Response;
 //import feign.codec.ErrorDecoder;
+//import io.github.paulmarcelinbejan.toolbox.exception.remoteservice.RemoteServiceException;
+//import io.github.paulmarcelinbejan.toolbox.web.response.ExceptionResponse;
 //
 //public class HyperBankErrorDecoder implements ErrorDecoder {
 //
