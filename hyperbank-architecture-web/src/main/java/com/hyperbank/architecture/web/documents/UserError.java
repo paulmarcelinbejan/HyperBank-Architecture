@@ -10,10 +10,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import io.github.paulmarcelinbejan.toolbox.exception.utils.ExceptionUtils;
 import io.github.paulmarcelinbejan.toolbox.web.response.ExceptionResponse;
+
 import lombok.AllArgsConstructor;
 
-@Document
 @AllArgsConstructor
+@Document("UserError")
 public class UserError {
 	
 	@Id
@@ -34,11 +35,11 @@ public class UserError {
 	private final String stackTrace;
 	
 	public UserError(Exception e, ExceptionResponse exceptionResponse) {
-		this.uniqueIdentifier = exceptionResponse.getUniqueIdentifier();
-		this.timestampUTC = exceptionResponse.getTimestampUTC();
-		this.exceptionType = exceptionResponse.getExceptionType();
-		this.message = exceptionResponse.getMessage();
-		this.stackTrace = ExceptionUtils.getStackTrace(e);
+		uniqueIdentifier = exceptionResponse.getUniqueIdentifier();
+		timestampUTC = exceptionResponse.getTimestampUTC();
+		exceptionType = exceptionResponse.getExceptionType();
+		message = exceptionResponse.getMessage();
+		stackTrace = ExceptionUtils.getStackTrace(e);
 	}
 	
 }
